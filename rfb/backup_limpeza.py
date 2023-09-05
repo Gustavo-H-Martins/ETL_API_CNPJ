@@ -70,3 +70,18 @@ def backup_sem_limpeza(pasta:str = os.listdir('.')[0],
                 caminho_arquivo = os.path.join(diretorio, arquivo)
                 # Adiciona o arquivo ao arquivo zip
                 zipf.write(caminho_arquivo, arquivo)
+
+def limpeza_sem_backup(pasta:str = os.listdir('.')[0], 
+    extensao:str = '.zip'):
+    # Define o diretório de trabalho
+    diretorio = pasta
+
+    # Remove os arquivos da pasta sem fazer backup
+    # Percorre o diretório em busca de arquivos csv que atendem aos critérios de data de modificação
+    for arquivo in os.listdir(diretorio):
+        # Verifica a existência de arquivos com a extensão informada
+        if arquivo.endswith(extensao):
+            # Define o caminho do arquivo validado
+            caminho_arquivo = os.path.join(diretorio, arquivo)
+            # Exclui o arquivo NA HORA!!!
+            os.remove(caminho_arquivo)
