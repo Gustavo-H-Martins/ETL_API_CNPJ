@@ -1,0 +1,205 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API VOUCHER LEADS",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http","https"
+  ],
+  "paths": {
+    "/api/leads/v1/estabelecimentos": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "x-forwarded-for",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "bandeira",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "bairro",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/leads/v1/estabelecimentos/counts": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "x-forwarded-for",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "bandeira",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "associados",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "souabrasel",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "bairro",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "groupby",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "orderby",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/leads/v1/estabelecimentos/bairros": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "x-forwarded-for",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "bandeira",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "bairro",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/leads/v1/estabelecimentos/cidades": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "x-forwarded-for",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "bandeira",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "cidade",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "bairro",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

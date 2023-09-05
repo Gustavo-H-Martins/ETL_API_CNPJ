@@ -1,0 +1,9 @@
+# ignore o venv
+.venv
+
+# ignore os pycache também fiotin?
+*.pyc 
+
+# ignore a pasta sec
+*.pem
+*.env
